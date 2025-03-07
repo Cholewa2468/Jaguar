@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Jaguar",
+    "version": "2.0",
+    "description": "Havi Text Expander",
+    "permissions": ["storage"],
+    "host_permissions": ["<all_urls>"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+	"web_accessible_resources": [
+        {
+            "resources": ["shortcuts.json"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+	
+}
